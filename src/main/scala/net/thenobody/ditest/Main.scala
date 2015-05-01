@@ -10,7 +10,7 @@ import net.thenobody.ditest.container._
 object Main {
 
   def main(args: Array[String]): Unit = {
-    val revenueService1: RevenueService = RevenueServiceProvider()
+    val revenueService1: RevenueService = RevenueServiceInstance
 
     revenueService1.getUserRevenue.foreach {
       case (user: User, revenue: Double) => println(s"${user} - ${revenue}")
