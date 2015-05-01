@@ -8,7 +8,7 @@ In this approach, we use constructor dependency passing rather than defining the
 ```
 net/thenobody/ditest/container/package.scala
 ```
-The container defines two types of instantiations:
+The container defines two types of instantiation:
 
 1. *singleton*  
 
@@ -20,7 +20,7 @@ object RevenueServiceInstance extends RedisRevenueService(
   UserServiceInstance
 )
 ```
-The instance of `RevenueServiceInstance` is created only once (when requested for the first time)
+The instance of `RevenueServiceInstance` is created only once (when requested for the first time).
 
 2. *prototype*
 
@@ -34,7 +34,7 @@ object RevenueServiceProvider {
   )
 }
 ```
-A new instance is created everytime it is requested
+A new instance is created everytime it is requested.
 
 ## Config
 The project uses [typesafe/Config](https://github.com/typesafehub/config) and by default reads the configuration parameters from `src/main/resources/application.conf`. This can be overriden by passing `config.file` system parameter when running from console:
